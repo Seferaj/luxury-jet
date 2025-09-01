@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="flight.css">
+  <title>Private Life | Flight Search</title>
+</head>
+<body>
+   <div class="mausi">
+            <div class="cursor"></div>
+            <script>
+                const cursor = document.querySelector('.cursor');
+    
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px")
+                })
+    
+                document.addEventListener('click', () => {
+                    cursor.classList.add("expand");
+    
+                    setTimeout(() => {
+                        cursor.classList.remove("expand");
+                    }, 500)
+                })
+    
+               
+            </script>
+  <!-- back arrow to home -->
+  <a href="index.html">&#8592; Home</a>
+
+  <!-- search form -->
+  <section>
+    <form>
+      <select name="trip-type">
+        <option>One-way</option>
+        <option>Round-trip</option>
+      </select>
+
+      <input type="text" placeholder="From (e.g. Paris)">
+      <input type="text" placeholder="To (e.g. New York)">
+      <input type="text" placeholder="1 adult, Business class">
+
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- filter buttons -->
+  <section>
+    <button>Cheapest</button>
+    <button>Best</button>
+    <button>Quickest</button>
+  </section>
+
+  <!-- flight results -->
+  <section>
+    <article>
+      <h3>12:30 am-1:30 pm</h3>
+      <p>PAR → NYC · 7h 10m</p>
+      <strong>$9,165</strong>
+      <button>Select</button>
+    </article>
+
+    <article>
+      <h3>8:00 pm - 10:15 pm</h3>
+      <p>PAR → NYC · 8h 30m</p>
+      <strong>$10,780</strong>
+      <button>Select</button>
+    </article>
+
+    <article>
+      <h3>2:30 pm - 5:25 pm</h3>
+      <p>PAR → NYC · 8h 55m</p>
+      <strong>$9,967</strong>
+      <button>Select</button>
+    </article>
+
+    <article>
+      <h3>6:30 pm - 9:10 pm</h3>
+      <p>PAR → NYC · 8h 40m</p>
+      <strong>$11,112</strong>
+      <button>Select</button>
+    </article>
+  </section>
+
+  <footer>
+    ©2025 Private Life. The easiest way to reach the places of dreams.
+  </footer>
+</body>
+</html>
